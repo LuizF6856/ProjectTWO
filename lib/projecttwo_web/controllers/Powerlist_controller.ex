@@ -1,8 +1,8 @@
-defmodule ProjecttwoWeb.PotenciaController do
+defmodule ProjecttwoWeb.PowerController do
     use ProjecttwoWeb, :controller
-    alias ProjecttwoWeb.PowerList
+    alias Projecttwo.PowerList
 
     def list(conn, %{"numbers" => numbers}) do 
-        json conn, %{powerlist: PowerList.list(numbers)}
+        json conn, %{powerlist: PowerList.power_of_list(numbers)}
     end
 end 
