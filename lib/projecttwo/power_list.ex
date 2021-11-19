@@ -1,5 +1,5 @@
-defmodule ProjecttwoWeb.PowerList do 
-    def list(numbers) do
+defmodule Projecttwo.PowerList do 
+    def power_of_list(numbers) do
       listpower = Regex.split(~R//, numbers) -- ["",""]
         |> Enum.map(&String.to_integer/1)
           

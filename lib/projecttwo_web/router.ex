@@ -10,6 +10,6 @@ defmodule ProjecttwoWeb.Router do
 
     resources "/users", UserController, except: [:new, :edit]  
     
-    get "powerlist/:numbers", PotenciaController, :list
+    get "powerlist/:numbers", PowerController, :list
   end
 end
