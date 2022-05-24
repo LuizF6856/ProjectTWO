@@ -1,8 +1,11 @@
 defmodule ProjecttwoWeb.PowerController do
-    use ProjecttwoWeb, :controller
-    alias Projecttwo.PowerList
+  use ProjecttwoWeb, :controller
 
-    def list(conn, %{"numbers" => numbers}) do 
-        json conn, %{powerlist: PowerList.power_of_list(numbers)}
-    end
-end 
+  alias Projecttwo.PowerList
+
+  def list(conn, %{"numbers" => numbers}) do
+    conn
+    |> put_status(:ok)
+    |> json(%{powerlist: PowerList.to_integer(numbers)})
+  end
+end

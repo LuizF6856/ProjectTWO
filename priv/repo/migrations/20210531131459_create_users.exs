@@ -10,6 +10,5 @@ defmodule Projecttwo.Repo.Migrations.CreateUsers do
 
       timestamps()
     end
-
   end
 end

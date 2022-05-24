@@ -8,8 +8,8 @@ defmodule ProjecttwoWeb.Router do
   scope "/api", ProjecttwoWeb do
     pipe_through :api
 
-    resources "/users", UserController, except: [:new, :edit]  
-    
-    get "powerlist/:numbers", PowerController, :list
+    resources "/users", UserController, except: [:new, :edit]
+
+    get "/powerlist/:numbers", PowerController, :list
   end
 end

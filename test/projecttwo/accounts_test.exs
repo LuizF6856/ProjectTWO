@@ -7,7 +7,12 @@ defmodule Projecttwo.AccountsTest do
     alias Projecttwo.Accounts.User
 
     @valid_attrs %{age: "some age", balance: 120.5, email: "some email", name: "some name"}
-    @update_attrs %{age: "some updated age", balance: 456.7, email: "some updated email", name: "some updated name"}
+    @update_attrs %{
+      age: "some updated age",
+      balance: 456.7,
+      email: "some updated email",
+      name: "some updated name"
+    }
     @invalid_attrs %{age: nil, balance: nil, email: nil, name: nil}
 
     def user_fixture(attrs \\ %{}) do
